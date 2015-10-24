@@ -2,14 +2,15 @@ toDoList.controller('ToDoListController', [function() {
 
   var self = this;
 
-  self.result ={
-     "items": [
-        "Make a todo app",
-        "Make it look good",
-    ]
-  };
+  self.todos = [
+    {text: 'Learn Angular', done:false},
+    {text: 'Build a todo app', done: false}
+  ];
+
+  self.totalToDos = 5;
 
   self.addToDo = function() {
-  console.log("New todo added!)");
-};
+    console.log("New todo added!)");
+  };
+
 }]);
