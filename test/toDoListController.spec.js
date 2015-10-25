@@ -11,4 +11,18 @@ describe('ToDoListController', function () {
     expect(ctrl.todos.length).toEqual(2);
   });
 
+
+
+  describe("adding new todos to the list", function() {
+    var todos = [
+      {text: 'Learn Angular', done:false},
+      {text: 'Build a todo app', done: false}
+    ];
+
+    it('displays a list of todos', function () {
+      expect(ctrl.todos).toEqual(todos);
+    });
+
+  });
+
 });

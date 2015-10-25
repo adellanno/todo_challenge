@@ -7,7 +7,7 @@ toDoList.controller('ToDoListController', [function() {
     {text: 'Build a todo app', done: false}
   ];
 
-  self.totalToDos = 5;
+  self.totalToDos = self.todos.length;
 
   self.addToDo = function() {
     console.log("New todo added!)");
