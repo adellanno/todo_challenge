@@ -7,8 +7,8 @@ describe('ToDoListController', function () {
     ctrl = $controller('ToDoListController');
   }));
 
-  it('initialises with empty todo list', function() {
-    expect(ctrl.addToDo).toBeUndefined();
+  it('expects list to initialize with two items', function() {
+    expect(ctrl.todos.length).toEqual(2);
   });
 
 });
