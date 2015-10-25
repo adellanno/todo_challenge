@@ -1,8 +1,13 @@
-describe('Github Profile finder', function() {
+describe('Todo list', function() {
+
+  beforeEach(function() {
+    browser.get('http://localhost:8080');
+  })
+
 
   it('has a title', function() {
-    browser.get('http://localhost:8080');
-
-    expect(browser.getTitle()).toEqual('Github user search');
+    expect(browser.getTitle()).toEqual('Todo List');
   });
+
+
 });

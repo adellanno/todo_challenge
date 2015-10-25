@@ -10,7 +10,7 @@ toDoList.controller('ToDoListController', [function() {
   self.totalToDos = self.todos.length;
 
   self.addToDo = function() {
-    console.log("New todo added!)");
+    self.todos.push({text:self.formTodoText, done:false});
   };
 
 }]);
