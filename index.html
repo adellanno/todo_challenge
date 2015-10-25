@@ -16,7 +16,7 @@
     <h2 class="total">Total todos: {{toDoCtrl.totalToDos()}}</h2>
     <ul>
       <li ng-repeat="todo in toDoCtrl.todos">
-        <input type="checkbox" ng-model="todo.done">
+        <input class="checkbox" type="checkbox" ng-model="todo.done">
         <span class="done-{{todo.done}}">{{todo.text}}</span>
       </li>
     </ul>
@@ -24,6 +24,8 @@
       <input type="text" ng-model="toDoCtrl.formTodoText" ng-model-instant>
       <button class="btn" ng-click="toDoCtrl.addToDo()" value="Addtodo" >Add</button>
     </form>
+
+    <button class="delete" ng-click="toDoCtrl.deleteCompleted()" value="delete">Delete Completed</button>
 
   </body>
 </html>
