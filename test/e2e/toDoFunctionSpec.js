@@ -18,5 +18,13 @@ describe('Todo list', function() {
     expect(todos.last().getText()).toEqual('New todo');
   })
 
+  it('total todo count will increase by one when a new item is added', function() {
+    element(by.model('toDoCtrl.formTodoText')).sendKeys('New todo');
+    element(by.css('[value="Addtodo"]')).click();
+
+    var todoCount = element.all(by.css('.total'))
+    expect(todoCount.getText()).toEqual([ 'Total todos: 3' ]);
+  })
+
 
 });

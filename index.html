@@ -13,7 +13,7 @@
   </head>
 
   <body ng-controller='ToDoListController as toDoCtrl'>
-    <h2>Total todos: {{toDoCtrl.totalToDos}}</h2>
+    <h2 class="total">Total todos: {{toDoCtrl.totalToDos()}}</h2>
     <ul>
       <li ng-repeat="todo in toDoCtrl.todos">
         <input type="checkbox" ng-model="todo.done">
