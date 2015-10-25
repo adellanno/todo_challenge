@@ -10,4 +10,13 @@ describe('Todo list', function() {
   });
 
 
+  it('can add a new todo item to the list', function() {
+    element(by.model('toDoCtrl.formTodoText')).sendKeys('New todo');
+    element(by.css('[value="Addtodo"]')).click();
+
+    var todos = element.all(by.repeater('todo in toDoCtrl.todos'));
+    expect(todos.last().getText()).toEqual('New todo');
+  })
+
+
 });
