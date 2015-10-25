@@ -12,10 +12,10 @@ toDoList.controller('ToDoListController', [function() {
   };
 
   self.deleteCompleted = function() {
-    self.todos = self.todos.filter(function(todo){
+    self.todos = self.todos.filter(function(todo) {
       return !todo.done;
-    })
-  }
+    });
+  };
 
   self.addToDo = function() {
     self.todos.push({text:self.formTodoText, done:false});
